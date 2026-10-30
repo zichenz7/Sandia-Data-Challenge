@@ -83,6 +83,10 @@ The original deck uses some stronger language about interactions, thermal mechan
 
 ## Running the archived analysis
 
+**Data access restriction:** challenge staff instructed the team not to publish the competition datasets. Their absence from this repository is intentional. This showcase documents methods, code, and previously recorded aggregate results; it does not distribute the underlying records.
+
+The setup below is for team members or others with separately authorized access to the restricted inputs. It is not a public data-download workflow.
+
 The main script expects these data frames to be present in an R session:
 
 ```r
@@ -92,13 +96,13 @@ AllData_PreEDM_Recycled_RowColIDs_correcteddates
 
 Required columns include `PlateID`, `Layout`, `RowID`, `ColID`, an inspection nonconformity column, and the dimensional columns listed in the script. The main script loads `dplyr`, `mgcv`, `lme4`, `ggplot2`, and `patchwork`; other exploratory scripts also use the tidyverse and `scales`.
 
-After obtaining the competition inputs and preparing the named data frames, run the main script from a clean R session:
+If you already have authorized access to the competition inputs, prepare the named data frames and run the main script from a clean R session:
 
 ```r
 source("without R.R")
 ```
 
-This is an archived workflow, not a fully packaged reproduction environment. Dependencies are not locked, several files assume preloaded objects, and model output is not stored as a machine-readable artifact. The public input files are absent from the current tree, so a fresh clone alone cannot reproduce the fit.
+This is an archived workflow, not a fully packaged reproduction environment. Dependencies are not locked, several files assume preloaded objects, and model output is not stored as a machine-readable artifact. The restricted input files are intentionally not distributed, so a fresh clone alone cannot reproduce the fit. Full public reproduction would require a separately permitted dataset; the original competition records must not be uploaded to fill this gap.
 
 Two implementation details deserve attention before reusing the plots: the main heatmap helper's data-mask filter compares column names with identically named arguments, which can fail to detect absent combinations; and the fixed-effects plot's original title says “averaging out” although the prediction call excludes those terms. The documentation describes these boundaries without changing the historical analysis scripts.
 

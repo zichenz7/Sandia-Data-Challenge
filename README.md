@@ -60,4 +60,4 @@ This was a three-person project with **Sam Wang and Rohit Iyer**. Competition pl
 
 ## Reproduction status
 
-The original scripts are exploratory RStudio analyses and depend on competition data loaded into the session. Input datasets are not included in the current repository tree. The documentation update checked the scripts and archived presentation; it did not rerun model fitting or create a new train/test experiment. [Setup and known limitations →](MODELING.md#running-the-archived-analysis)
+**The competition data cannot be published: challenge staff instructed the team not to disclose the datasets.** They are intentionally excluded from this public repository. The original scripts are exploratory RStudio analyses that require those restricted inputs, so a public clone cannot reproduce the model fit. The documentation update checked the scripts and archived presentation; it did not rerun model fitting or create a new train/test experiment. [Setup and known limitations →](MODELING.md#running-the-archived-analysis)
